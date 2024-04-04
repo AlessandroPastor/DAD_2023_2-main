@@ -1,6 +1,6 @@
 spring:
     application:
-        name: ms-venta-service
+        name: ms-ventas-service
     profiles:
         active: development
     config:
