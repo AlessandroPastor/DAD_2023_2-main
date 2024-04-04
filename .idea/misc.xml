@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/ms-regystry-server/pom.xml" />
         <option value="$PROJECT_DIR$/ms-registry-server/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-venta/pom.xml" />
       </list>
     </option>
   </component>
