@@ -3,17 +3,15 @@ package com.example.msventa.Entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 @Entity
-public class Venta {
-
+public class VentaDetalle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String registroventa;
 
-    @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL)
-    private List<VentaDetalle> detalles;
+    @ManyToOne
+    @JoinColumn(name = "venta_id")
+    private Venta venta;
 }
