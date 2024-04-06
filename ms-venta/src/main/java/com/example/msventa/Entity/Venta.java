@@ -15,5 +15,5 @@ public class Venta {
     private String registroventa;
 
     @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL)
-    private List<VentaDetalle> detalles;
+    private List<VentaDetalle> ventaDetalles;
 }

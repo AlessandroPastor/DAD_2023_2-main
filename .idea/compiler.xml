@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ms-venta" />
         <module name="config-server" />
+        <module name="ms-pedido" />
         <module name="ms-registry-server" />
         <module name="demo" />
         <module name="eureka-server" />
@@ -25,6 +26,7 @@
       <module name="demo" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="ms-catalogo" options="-parameters" />
+      <module name="ms-pedido" options="-parameters" />
       <module name="ms-registry-server" options="-parameters" />
       <module name="ms-regystry-server" options="-parameters" />
       <module name="ms-venta" options="-parameters" />
