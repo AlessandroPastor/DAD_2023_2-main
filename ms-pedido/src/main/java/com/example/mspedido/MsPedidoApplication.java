@@ -16,9 +16,9 @@ public class MsPedidoApplication {
 	@Bean
 	public OpenAPI custumOpenApi() {
 		return new OpenAPI().info(new Info()
-				.title("OPEN API MICROSERVICIO CLIENTE")
+				.title("OPEN API MICROSERVICIO Pedidos")
 				.version("0.0.1")
-				.description("servicio web cliente")
+				.description("servicio web Pedidos")
 				.termsOfService("http://swagger.io/terms")
 				.license(new License().name("Apache 2.0").url("http://springdoc.org"))
 		);
