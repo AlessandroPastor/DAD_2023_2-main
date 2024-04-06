@@ -1,10 +1,7 @@
 package com.example.mspedido.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -22,4 +19,8 @@ public class PedidoDetalle {
     private String telefonoCliente;
     private String productoVendido;
     private double precioProducto;
+
+    @ManyToOne
+    @JoinColumn(name = "pedido_id")
+    private Pedido pedido;
 }
