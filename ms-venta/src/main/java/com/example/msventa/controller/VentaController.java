@@ -13,31 +13,31 @@ import java.util.List;
 
 public class VentaController {
     @Autowired
-    private VentaService ventasService;
+    private VentaService ventaService;
 
     @GetMapping()
     public ResponseEntity<List<Venta>> listar(){
-        return ResponseEntity.ok(ventasService.listar());
+        return ResponseEntity.ok(ventaService.listar());
     }
 
     @PostMapping
     public ResponseEntity<Venta>guardar(@RequestBody Venta venta){
-        return ResponseEntity.ok(ventasService.guardar(venta));
+        return ResponseEntity.ok(ventaService.guardar(venta));
     }
 
     @PutMapping
     public ResponseEntity<Venta>actualizar(@RequestBody Venta venta){
-        return ResponseEntity.ok(ventasService.actualizar(venta));
+        return ResponseEntity.ok(ventaService.actualizar(venta));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Venta>listaPorld(@PathVariable(required = true) Integer id){
-        return ResponseEntity.ok(ventasService.listaPorld(id).get());
+        return ResponseEntity.ok(ventaService.listaPorld(id).get());
     }
 
     @DeleteMapping ("/{id}")
     public ResponseEntity<List<Venta>>eliminar(@PathVariable(required = true) Integer id){
-        ventasService.eliminar(id);
-        return ResponseEntity.ok(ventasService.listar());
+        ventaService.eliminar(id);
+        return ResponseEntity.ok(ventaService.listar());
     }
 }
