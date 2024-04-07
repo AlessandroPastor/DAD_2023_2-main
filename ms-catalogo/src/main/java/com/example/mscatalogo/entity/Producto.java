@@ -3,6 +3,8 @@ package com.example.mscatalogo.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 public class Producto {
@@ -17,4 +19,7 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
+    private List<Categoria> categorias;
 }
