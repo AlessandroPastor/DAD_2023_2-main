@@ -15,4 +15,8 @@ public class Pedido {
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     private List<PedidoDetalle> pedidoDetalles;
+
+    @ManyToOne
+    @JoinColumn(name = "pedidodetalle_id")
+    private PedidoDetalle pedidoDetalle;
 }
