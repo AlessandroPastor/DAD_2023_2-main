@@ -12,11 +12,4 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String pedido;
-
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
-    private List<PedidoDetalle> pedidoDetalles;
-
-    @ManyToOne
-    @JoinColumn(name = "pedidodetalle_id")
-    private PedidoDetalle pedidoDetalle;
 }

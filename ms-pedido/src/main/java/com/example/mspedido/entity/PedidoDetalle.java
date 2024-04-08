@@ -1,6 +1,7 @@
 package com.example.mspedido.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,10 +23,8 @@ public class PedidoDetalle {
     private String productoVendido;
     private double precioProducto;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pedido_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Pedido pedido;
-
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
-    private List<Pedido> pedidos;
 }

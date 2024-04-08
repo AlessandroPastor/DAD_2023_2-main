@@ -17,9 +17,5 @@ public class Categoria {
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Producto> productos;
 
-    @ManyToOne
-    @JoinColumn(name = "producto_id")
-    private Producto producto;
-
 
 }
