@@ -14,15 +14,13 @@ public class PedidoDetalle {
     @Id
     @GeneratedValue()
     private Integer id;
-    private String fechaVenta;
-    private String metodoPago;
-    private String nombreCliente;
-    private String direccionCliente;
-    private String correoCliente;
-    private String telefonoCliente;
-    private String productoVendido;
-    private double precioProducto;
-
+    private Double cantidad;
+    private Double precio;
+    private Integer productoId;
+    public PedidoDetalle() {
+        this.cantidad = (double) 0;
+        this.precio = (double) 0;
+    }
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pedido_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
