@@ -14,8 +14,5 @@ public class Categoria {
     private Integer id;
     private String nombre;
 
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
-    private List<Producto> productos;
-
 
 }

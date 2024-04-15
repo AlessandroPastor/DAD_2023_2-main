@@ -1,6 +1,7 @@
 package com.example.mspedido.entity;
 
 
+import com.example.mspedido.dto.ProductoDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class PedidoDetalle {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Double cantidad;
     private Double precio;
@@ -21,8 +22,7 @@ public class PedidoDetalle {
         this.cantidad = (double) 0;
         this.precio = (double) 0;
     }
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "pedido_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Pedido pedido;
+
+    @Transient
+    private ProductoDto productoDto;
 }

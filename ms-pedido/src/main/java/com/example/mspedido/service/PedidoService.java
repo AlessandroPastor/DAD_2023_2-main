@@ -12,4 +12,6 @@ public interface PedidoService {
     public Pedido actualizar(Pedido pedido);
     public Optional<Pedido> listarPorId(Integer id);
     public void eliminarPorId(Integer id);
+    public Pedido crearPedido(Pedido pedido);
+
 }

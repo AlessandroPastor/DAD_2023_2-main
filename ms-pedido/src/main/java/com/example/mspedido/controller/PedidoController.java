@@ -35,4 +35,6 @@ public class PedidoController {
     public String deleteById(@PathVariable(required = true) Integer id){ pedidoService.eliminarPorId(id);
         return "Eliminado Correctamente :3";
     }
+
+
 }
