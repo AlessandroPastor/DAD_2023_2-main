@@ -32,7 +32,13 @@ public class PedidoServiceImpl implements PedidoService {
     }
     @Override
     public Pedido guardar(Pedido pedido) {
+        if (pedido.getClienteId() == null) {
+            throw new ClienteNotFoundException("El cliente es obligatorio para guardar un pedido");
+        }
+
+        // Guardar el pedido en la base de datos
         return pedidoRepository.save(pedido);
+
     }
     @Override
     public Pedido actualizar(Pedido pedido) {

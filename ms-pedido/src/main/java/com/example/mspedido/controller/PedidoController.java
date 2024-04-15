@@ -21,6 +21,13 @@ public class PedidoController {
     }
     @PostMapping()
     public ResponseEntity<Pedido> save(@RequestBody Pedido pedido){
+        if (pedido.getClienteId() == null) {
+            return ResponseEntity.badRequest().build();
+        }
+        // Llamar al servicio para guardar el pedido
+        Pedido nuevoPedido = pedidoService.guardar(pedido);
+
+        // Devolver el pedido guardado en la respuesta
         return ResponseEntity.ok(pedidoService.guardar(pedido));
     }
     @PutMapping()
