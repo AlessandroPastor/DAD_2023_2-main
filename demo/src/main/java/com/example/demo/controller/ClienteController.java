@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/cliente")
 
 public class ClienteController {
-        @Autowired
+    @Autowired
     private ClienteServices clienteServices;
 
     @GetMapping()
