@@ -40,6 +40,4 @@ public class CategoriaController {
         return ResponseEntity.ok(categoriaService.listar());
     }
 
-
-
 }
