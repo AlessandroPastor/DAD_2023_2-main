@@ -52,7 +52,7 @@ public class PedidoServiceImpl implements PedidoService {
             pedidoDetalle.setProductoDto(productoFeign.buscarlistarPorld(pedidoDetalle.getProductoId()).getBody());
         }*/
         List<PedidoDetalle> pedidoDetalles = pedido.get().getDetalle().stream().map(pedidoDetalle -> {
-            pedidoDetalle.setProductoDto(productoFeign.buscarlistarPorld(pedidoDetalle.getProductoId()).getBody());
+            pedidoDetalle.setProductoDto(productoFeign.listarPorId(pedidoDetalle.getProductoId()).getBody());
             return pedidoDetalle;
         }).toList();
         /*--Captura Cliente-*/
@@ -70,7 +70,7 @@ public class PedidoServiceImpl implements PedidoService {
 
         // Verificar si los productos asociados existen
         for (PedidoDetalle detalle : pedido.getDetalle()) {
-            ProductoDto productoDto = productoFeign.buscarlistarPorld(detalle.getProductoId()).getBody();
+            ProductoDto productoDto = productoFeign.listarPorId(detalle.getProductoId()).getBody();
             if (productoDto == null) {
                 throw new ProductoNotFoundException("El producto del detalle de pedido no existe");
             }
