@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/pedido")
 public class PedidoController {
+
     @Autowired
     private PedidoService pedidoService;
     @GetMapping()
@@ -42,6 +43,5 @@ public class PedidoController {
     public String deleteById(@PathVariable(required = true) Integer id){ pedidoService.eliminarPorId(id);
         return "Eliminado Correctamente :3";
     }
-
 
 }
