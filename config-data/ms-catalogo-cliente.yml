@@ -1,6 +1,6 @@
 server:
-  port: 8082
-  #port: ${PORT:${SERVER_PORT:0}}
+  #port: 8082
+  port: ${PORT:${SERVER_PORT:0}}
   #Aletorio
   #Swagger
 springdoc:
@@ -24,7 +24,9 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8090/eureka
+      #defaultZone: http://localhost:8090/eureka
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
   instance:
-    hostname: localhost
+    #hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
