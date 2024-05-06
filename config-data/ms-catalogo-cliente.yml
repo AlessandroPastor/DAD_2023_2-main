@@ -3,6 +3,7 @@ server:
   port: ${PORT:${SERVER_PORT:0}}
   #Aletorio
   #Swagger
+
 springdoc:
   api-docs:
     enabled: true
@@ -10,6 +11,7 @@ springdoc:
     enabled: true
     path: /doc/swagger-ui.html
   #DATA
+
 spring:
   jpa:
     hibernate.ddl-auto: update
@@ -21,6 +23,7 @@ spring:
     username: root
     password:
   #Descubrimiento
+
 eureka:
   client:
     serviceUrl:
