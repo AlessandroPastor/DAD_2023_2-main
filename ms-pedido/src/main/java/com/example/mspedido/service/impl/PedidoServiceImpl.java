@@ -46,8 +46,8 @@ public class PedidoServiceImpl implements PedidoService {
     }
     @Override
     public Optional<Pedido> listarPorId(Integer id){
-        Optional<Pedido> pedido= pedidoRepository.findById(id);
-        ClienteDto clienteDto = clienteFeign.listarPorld(pedido.get().getClienteId()).getBody();
+            Optional<Pedido> pedido= pedidoRepository.findById(id);
+            ClienteDto clienteDto = clienteFeign.listarPorld(pedido.get().getClienteId()).getBody();
         /*for (PedidoDetalle pedidoDetalle : pedido.get().getDetalle()){
             pedidoDetalle.setProductoDto(productoFeign.buscarlistarPorld(pedidoDetalle.getProductoId()).getBody());
         }*/
