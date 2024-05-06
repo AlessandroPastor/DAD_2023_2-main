@@ -1,13 +1,15 @@
 server:
   port: 8082
   #port: ${PORT:${SERVER_PORT:0}}
+  #Aletorio
+  #Swagger
 springdoc:
   api-docs:
     enabled: true
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
-
+  #DATA
 spring:
   jpa:
     hibernate.ddl-auto: update
@@ -18,7 +20,7 @@ spring:
     url: jdbc:mysql://localhost:3306/ms-cliente
     username: root
     password:
-
+  #Descubrimiento
 eureka:
   client:
     serviceUrl:
