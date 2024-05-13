@@ -11,6 +11,7 @@
         <module name="config-server" />
         <module name="ms-gateway-server" />
         <module name="ms-pedido" />
+        <module name="ms-auth" />
         <module name="ms-registry-server" />
         <module name="demo" />
         <module name="eureka-server" />
@@ -26,6 +27,7 @@
       <module name="config-server" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="ms-auth" options="-parameters" />
       <module name="ms-catalogo" options="-parameters" />
       <module name="ms-gateway-server" options="-parameters" />
       <module name="ms-pedido" options="-parameters" />
