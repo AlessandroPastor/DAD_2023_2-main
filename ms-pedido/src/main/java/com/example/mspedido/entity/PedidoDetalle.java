@@ -1,6 +1,7 @@
 package com.example.mspedido.entity;
 
 
+import com.example.mspedido.dto.CategoriaDto;
 import com.example.mspedido.dto.ProductoDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
