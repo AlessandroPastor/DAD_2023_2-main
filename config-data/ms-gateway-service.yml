@@ -35,3 +35,7 @@ spring:
           uri: lb://ms-ventas-service
           predicates:
             - Path=/venta/**
+        - id: ms-auth-service
+          uri: lb://ms-auth-service
+          predicates:
+            - Path=/auth/**
