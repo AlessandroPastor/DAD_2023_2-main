@@ -1,6 +1,5 @@
 package com.example.mspedido.feign;
 
-import com.example.mspedido.dto.ClienteDto;
 import com.example.mspedido.dto.ProductoDto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.cloud.openfeign.FeignClient;
