@@ -21,6 +21,8 @@ spring:
           uri: lb://ms-catalogo-service
           predicates:
             - Path=/categoria/** , /producto/**
+          filters:
+            - AuthFilter
         - id: ms-catalogo-cliente
           uri: lb://ms-catalogo-cliente
           predicates:
