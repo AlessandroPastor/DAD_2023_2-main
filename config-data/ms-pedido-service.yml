@@ -11,6 +11,8 @@ springdoc:
     path: /doc/swagger-ui.html
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
